@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+  build:
+    commands:
+      - echo "Building the application..."
+      - zip -r my-web-app.zip index.html appspec.yml scripts/
+artifacts:
+  files:
+    - my-web-app.zip
+  discard-paths: yes
